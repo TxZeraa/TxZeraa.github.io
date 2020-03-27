@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <!-- faz anotação-->
 <html>
+	<!-- "CABEÇA" DO SITE-->
 	<head>
 		<meta charset="utf-8">
 		<!-- ^ tag para definir o enconding do arquivo-->
 		<title>TÍTULO DA ABA</title>
 	</head>
+	<!-- CORPO DO SITE-->
 	<body style="background-color: lightblue;">
-		<header style="background-color: #123456">
 		<!-- PARTE DO CABECALHO DA PÁGINA-->
+		<header style="background-color: #123456">
 			<hr/>
 			<!-- LINHA HORIZONTAL-->
 			<h1>EU APRENDENDO HTML E CSS É ISSO AI</h1>
@@ -22,16 +24,16 @@
 			</nav>
 			<hr/>
 		</header>
-		<main>
 		<!-- PARTE DO CORPO DA PÁGINA-->
+		<main>
 			<h1>TÍTULO ENORME</h1>
 			<h2>TÍTULO GRANDE</h2>
 			<h3>TÍTULO MÉDIO</h3>
 			<h4>TÍTULO NORMAL</h4>
 			<h5>TÍTULO PEQUENO</h5>
 			<h6>TÍTULO MINÚSCULO</h6>
-			<br/>
-			<!-- DÁ UM ESPAÇO-->
+			<br/> <!-- DÁ UM ESPAÇO-->
+			<!-- FORMATAÇÃO DE TEXTO-->
 			<article>
 				<section>
 					<!-- para definir diferentes seções ou artigos sem necessáriamente mudar o layout-->
@@ -57,6 +59,7 @@
 					<br/>
 				</section>
 			</article>
+			<!-- VIDEOS E IMAGENS NA PÁGINA-->
 			<article>
 				<section>
 					<hr/>
@@ -70,12 +73,70 @@
 					<h1>VIDEOZINHOS MANEIRO MANO</h1>
 					<video src="img/st.mp4" controls width="480" height="360"></video>
 					<!-- o argumento "poster=" muda a thumbnail do vídeo-->
+					<hr/>
 				</section>
 			</article>
-
+			<!-- LISTAS -->
+			<article>
+				<h1>LISTAS</h1>
+				<section>
+					<ul>
+						<li>LISTAS</li>
+						<li>SEM</li>
+						<li>ORDEM</li>
+					</ul>
+				</section>
+				<section>
+					<ol>
+						<!-- usando o argumento type="" dá pra mudar de números pra outro jeito de numerar-->
+						<!--"A" é pra listar com ABC, "I" em números romanos e o mesmo acontece para essas letras minusculas-->
+						<li>LISTAS</li>
+						<li>COM</li>
+						<li>ORDEM</li>
+					</ol>
+					<ol type="A">
+						<li>LISTAS</li>
+						<li>COM</li>
+						<li>LETRAS</li>
+					</ol>
+					<ol type="a">
+						<li>LISTAS</li>
+						<li>COM</li>
+						<li>LETRAS MINUSCULAS</li>
+					</ol>
+					<ol type="I">
+						<li>LISTAS</li>
+						<li>COM</li>
+						<li>ROMANOS</li>
+					</ol>
+					<ol type="i">
+						<li>LISTAS</li>
+						<li>COM</li>
+						<li>ROMANOS MINUSCULOS</li>
+					</ol>
+					<dl>
+						<dt>LISTA</dt>
+						<dd>Isso é uma descrição</dd>
+						<dt>COM</dt>
+						<dd>Isso é uma descrição</dd>
+						<dt>DESCRIÇÃO</dt>
+						<dd>Isso é uma descrição</dd>
+					</dl>
+				</section>
+			</article>
+			<article>
+				<section>
+					<table>
+						<caption>TESTE</caption>
+						<tr>
+							aaaaaaaaaaaa
+						</tr>
+					</table>
+				</section>
+			</article>
 		</main>
-		<footer style="background-color: #123456">
 		<!-- PARTE DO FIM DA PÁGINA-->
+		<footer style="background-color: #123456">
 			<hr/>
 			<h1>EU APRENDENDO HTML E CSS É ISSO AI</h1>
 			<hr/>
