@@ -1,0 +1,96 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tradutor de Sigilos</title>
+<style>
+
+@font-face {
+	font-family: 'Sigilos';
+	src: url('fontesigilos.ttf');
+}
+
+h1 {
+    filter: drop-shadow(0 0 10px #F5DC8A) drop-shadow(0 0 5px #F5DC8A);
+}
+
+body {
+	background-color: #030303; 
+	color: #ffffff;
+}
+
+textarea {
+	width: 100%;
+	height: 40%;
+	background-color: #0C0C0C;
+	color: #ffffff;
+	border-width: 0px;
+	border-radius: 8px;
+	resize: none;
+	font-size: 24px;
+	padding: 12px;
+	filter: drop-shadow(0 0 8px #F5DC8A);
+	text-align:center;
+}
+
+textarea#traduzido {
+	border-width: 0px;
+	outline: 0px;
+}
+
+textarea#input:focus { 
+    outline: none !important;
+	filter: drop-shadow(0 0 12px #FABD11);
+ }
+
+#cima {
+	margin: 35px;
+	text-align:center
+}
+
+#meio1, #meio2{
+	margin: 35px;
+}
+
+#meio1 {
+	margin-top: 0px;
+}
+
+#meio2{
+	margin-bottom: 0px;
+}
+
+#traduzido {
+	font-family: Sigilos;
+	font-size: 34px;
+}
+
+</style>
+
+<script>
+	function traduzir() {
+		var texto = document.getElementById('input').value;
+		document.getElementById("traduzido").innerHTML = texto;
+	}
+	function sombraforte() {
+		document.getElementById('titulo').style.filter = "drop-shadow(0 0 10px #FABD11) drop-shadow(0 0 5px #FABD11)";
+		document.getElementById('traduzido').style.filter = "drop-shadow(0 0 12px #FABD11)";
+	}
+	function sombrafraco() {
+		document.getElementById('titulo').style.filter = "drop-shadow(0 0 10px #F5DC8A) drop-shadow(0 0 5px #F5DC8A)";
+		document.getElementById('traduzido').style.filter = "drop-shadow(0 0 8px #F5DC8A)";
+	}
+</script>
+
+</head>
+<body>
+<div id="cima">
+	<h1 id="titulo">TRADUTOR DE SIGILOS DO CONHECIMENTO</h1>
+</div>
+<div id="meio1">
+	<textarea id="input" onkeyup="traduzir()" onfocus="sombraforte()" onfocusout="sombrafraco()" placeholder="Seu texto aqui."></textarea>
+</div>
+<div id="meio2">
+	<textarea readonly id="traduzido" placeholder="Seu texto aqui."></textarea>
+</div>
+</body>
+</html>
