@@ -11,6 +11,7 @@
 
 h1 {
     filter: drop-shadow(0 0 10px #F5DC8A) drop-shadow(0 0 5px #F5DC8A);
+	transition: .2s ease-in-out;
 }
 
 body {
@@ -30,7 +31,7 @@ textarea {
 	padding: 12px;
 	filter: drop-shadow(0 0 8px #F5DC8A);
 	text-align:center;
-	transition: .1s ease-in;
+	transition: .2s ease-in-out;
 }
 
 textarea#traduzido {
@@ -40,7 +41,6 @@ textarea#traduzido {
 
 textarea#input:focus { 
     outline: none !important;
-	filter: drop-shadow(0 0 12px #FABD11);
  }
 
 #cima {
@@ -71,14 +71,19 @@ textarea#input:focus {
 	function traduzir() {
 		var texto = document.getElementById('input').value;
 		document.getElementById("traduzido").innerHTML = texto;
+		document.getElementById('titulo').style.filter = "drop-shadow(0 0 10px #FABD11) drop-shadow(0 0 5px #FABD11)";
+		document.getElementById('traduzido').style.filter = "drop-shadow(0 0 12px #FABD11)";
+		document.getElementById('input').style.filter = "drop-shadow(0 0 12px #FABD11)";
 	}
 	function sombraforte() {
 		document.getElementById('titulo').style.filter = "drop-shadow(0 0 10px #FABD11) drop-shadow(0 0 5px #FABD11)";
 		document.getElementById('traduzido').style.filter = "drop-shadow(0 0 12px #FABD11)";
+		document.getElementById('input').style.filter = "drop-shadow(0 0 12px #FABD11)";
 	}
 	function sombrafraco() {
 		document.getElementById('titulo').style.filter = "drop-shadow(0 0 10px #F5DC8A) drop-shadow(0 0 5px #F5DC8A)";
 		document.getElementById('traduzido').style.filter = "drop-shadow(0 0 8px #F5DC8A)";
+		document.getElementById('input').style.filter = "drop-shadow(0 0 8px #F5DC8A)";
 	}
 </script>
 
@@ -88,7 +93,8 @@ textarea#input:focus {
 	<h1 id="titulo">TRADUTOR DE SIGILOS DO CONHECIMENTO</h1>
 </div>
 <div id="meio1">
-	<textarea id="input" onkeyup="traduzir()" onfocus="sombraforte()" onfocusout="sombrafraco()" placeholder="Seu texto aqui."></textarea>
+	<!--onfocus="sombraforte()"-->
+	<textarea id="input" onkeyup="traduzir()" onfocusout="sombrafraco()" placeholder="Seu texto aqui."></textarea>
 </div>
 <div id="meio2">
 	<textarea readonly id="traduzido" placeholder="Seu texto aqui."></textarea>
