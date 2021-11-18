@@ -22,14 +22,15 @@ body {
 textarea {
 	width: 100%;
 	height: 40%;
-	background-color: #0C0C0C;
+	background-color: #101010;
 	color: #ffffff;
 	border-width: 0px;
-	border-radius: 8px;
+	border-radius: 12px;
 	resize: none;
 	font-size: 24px;
 	padding: 12px;
 	filter: drop-shadow(0 0 8px #F5DC8A);
+	box-shadow: inset 0px 0px 8px #F5DC8A;
 	text-align:center;
 	transition: .2s ease-in-out;
 }
@@ -74,16 +75,15 @@ textarea#input:focus {
 		document.getElementById('titulo').style.filter = "drop-shadow(0 0 10px #FABD11) drop-shadow(0 0 5px #FABD11)";
 		document.getElementById('traduzido').style.filter = "drop-shadow(0 0 12px #FABD11)";
 		document.getElementById('input').style.filter = "drop-shadow(0 0 12px #FABD11)";
-	}
-	function sombraforte() {
-		document.getElementById('titulo').style.filter = "drop-shadow(0 0 10px #FABD11) drop-shadow(0 0 5px #FABD11)";
-		document.getElementById('traduzido').style.filter = "drop-shadow(0 0 12px #FABD11)";
-		document.getElementById('input').style.filter = "drop-shadow(0 0 12px #FABD11)";
+		document.getElementById('traduzido').style.boxShadow = "inset 0px 0px 12px #FABD11)";
+		document.getElementById('input').style.boxShadow = "inset 0px 0px 12px #FABD11";
 	}
 	function sombrafraco() {
 		document.getElementById('titulo').style.filter = "drop-shadow(0 0 10px #F5DC8A) drop-shadow(0 0 5px #F5DC8A)";
 		document.getElementById('traduzido').style.filter = "drop-shadow(0 0 8px #F5DC8A)";
 		document.getElementById('input').style.filter = "drop-shadow(0 0 8px #F5DC8A)";
+		document.getElementById('traduzido').style.boxShadow = "inset 0px 0px 8px #F5DC8A)";
+		document.getElementById('input').style.boxShadow = "inset 0px 0px 8px #F5DC8A";
 	}
 </script>
 
