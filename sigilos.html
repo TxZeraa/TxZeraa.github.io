@@ -1,6 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<link rel="icon" type="image/png" href="favicon.png"/>
 <title>Tradutor de Sigilos</title>
 <style>
 
@@ -47,6 +48,7 @@ textarea:focus {
 	box-shadow: -4px -4px 5px #000000, 5px 5px 7px rgb(245 220 138 / 30%), 2px 2px 2px rgb(245 220 138 / 20%);
 	height: 70vh;
 	border-radius: 12px;
+	justify-content: space-between;
 }
 
 #cima {
@@ -65,12 +67,49 @@ textarea:focus {
 
 #meio2{
 	display: inline-block;
-	width: 100%;
+	width: 90%;
+}
+
+#meio3{
+	display: inline-block;
+	width: 8%;
 }
 
 #traduzido {
 	font-family: Sigilos;
 	font-size: 34px;
+}
+
+.ajustarfonte {
+	text-align: center;
+	border-width: 0px;
+	background-color: #090909;
+	color: #ffffff;
+	width: 100%;
+	border-radius: 4px;
+	height: 5%;
+	margin: 15%;
+	transition: .2s ease-in-out;
+	box-shadow: inset -2px -2px 1px #000000, inset -1px -1px 1px #000000, inset 1px 1px 5px rgb(245 220 138 / 10%), inset 1px 1px 1px rgb(245 220 138 / 60%)
+}
+button.ajustarfonte:active {
+	outline: none !important;
+	box-shadow: inset -2px -2px 1px rgb(250 189 17 / 10%), inset -1px -1px 1px rgb(250 189 17 / 60%), inset 1px 1px 5px #000000, inset 1px 1px 1px #000000 !important;
+}
+
+input#tamanhofonte.ajustarfonte:focus { 
+	outline: none !important;
+	box-shadow: inset -2px -2px 1px #000000, inset -1px -1px 1px #000000, inset 1px 1px 5px rgb(250 189 17 / 10%), inset 1px 1px 1px rgb(250 189 17 / 60%) !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 </style>
@@ -84,6 +123,11 @@ textarea:focus {
 		areadetextos[0].style.boxShadow = "inset -2px -2px 4px #000000, inset -2px -2px 4px #000000, inset 3px 3px 3px rgb(250 189 17 / 10%), inset 1px 1px 2px rgb(250 189 17 / 60%)";
 		areadetextos[1].style.boxShadow = "inset -2px -2px 4px #000000, inset -2px -2px 4px #000000, inset 3px 3px 3px rgb(250 189 17 / 10%), inset 1px 1px 2px rgb(250 189 17 / 60%)";
 		document.getElementById('meio').style.boxShadow = "-4px -4px 5px #000000, 5px 5px 7px rgb(250 189 17 / 30%), 2px 2px 2px rgb(250 189 17 / 20%)";
+		var botoes = document.getElementsByClassName('ajustarfonte')
+		console.log(botoes)
+		botoes[0].style.boxShadow = "inset -2px -2px 1px #000000, inset -1px -1px 1px #000000, inset 1px 1px 5px rgb(250 189 17 / 10%), inset 1px 1px 1px rgb(250 189 17 / 60%)";
+		botoes[1].style.boxShadow = "inset -2px -2px 1px #000000, inset -1px -1px 1px #000000, inset 1px 1px 5px rgb(250 189 17 / 10%), inset 1px 1px 1px rgb(250 189 17 / 60%)";
+		botoes[2].style.boxShadow = "inset -2px -2px 1px #000000, inset -1px -1px 1px #000000, inset 1px 1px 5px rgb(250 189 17 / 10%), inset 1px 1px 1px rgb(250 189 17 / 60%)";
 	}
 	function sombrafraco() {
 		document.getElementById('titulo').style.filter = "drop-shadow(0px 0px 2px rgb(245, 220, 138)) drop-shadow(0px 0px 6px rgba(245, 220, 138, 0.4)) drop-shadow(0px 0px 6px rgba(245, 220, 138, 0.2))";
@@ -91,6 +135,29 @@ textarea:focus {
 		areadetextos[0].style.boxShadow = "inset -2px -2px 4px #000000, inset -2px -2px 4px #000000, inset 3px 3px 3px rgb(245 220 138 / 10%), inset 1px 1px 2px rgb(245 220 138 / 60%)";
 		areadetextos[1].style.boxShadow = "inset -2px -2px 4px #000000, inset -2px -2px 4px #000000, inset 3px 3px 3px rgb(245 220 138 / 10%), inset 1px 1px 2px rgb(245 220 138 / 60%)";
 		document.getElementById('meio').style.boxShadow = "-4px -4px 5px #000000, 5px 5px 7px rgb(245 220 138 / 30%), 2px 2px 2px rgb(245 220 138 / 20%)";
+		var botoes = document.getElementsByClassName('ajustarfonte')
+		botoes[0].style.boxShadow = "inset -2px -2px 1px #000000, inset -1px -1px 1px #000000, inset 1px 1px 5px rgb(245 220 138 / 10%), inset 1px 1px 1px rgb(245 220 138 / 60%)";
+		botoes[1].style.boxShadow = "inset -2px -2px 1px #000000, inset -1px -1px 1px #000000, inset 1px 1px 5px rgb(245 220 138 / 10%), inset 1px 1px 1px rgb(245 220 138 / 60%)";
+		botoes[2].style.boxShadow = "inset -2px -2px 1px #000000, inset -1px -1px 1px #000000, inset 1px 1px 5px rgb(245 220 138 / 10%), inset 1px 1px 1px rgb(245 220 138 / 60%)";
+	}
+	
+	function botao(operacao) {
+		var fonteatual = document.getElementById('tamanhofonte').value;
+		fonteatual = parseInt(fonteatual, 10);
+		var fontealterado;
+		if (operacao == 'soma') {
+			fontealterado = fonteatual + 1;
+		} else if (operacao == 'sub') {
+			fontealterado = fonteatual - 1;
+		}
+		document.getElementById("tamanhofonte").value = fontealterado;
+		document.getElementById("tamanhofonte").onchange();
+	}
+	
+	function tamanhosigilos() {
+		var fonteatual = document.getElementById('tamanhofonte').value;
+		fonteatual = parseInt(fonteatual, 10);
+		document.getElementById("traduzido").style.fontSize = fonteatual;
 	}
 </script>
 
@@ -106,6 +173,11 @@ textarea:focus {
 </div>
 <div id="meio2">
 	<textarea readonly id="traduzido" placeholder="Seu texto aqui."></textarea>
+</div>
+<div id="meio3">
+	<input type="number" min="0" class="ajustarfonte" id="tamanhofonte" value='34' onchange="tamanhosigilos()">
+	<button class="ajustarfonte" onclick="botao('soma')">+1</button>
+	<button class="ajustarfonte" onclick="botao('sub')">-1</button>
 </div>
 </div>
 </body>
