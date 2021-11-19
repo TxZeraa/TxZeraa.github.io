@@ -10,55 +10,62 @@
 }
 
 h1 {
-    filter: drop-shadow(0 0 10px #F5DC8A) drop-shadow(0 0 5px #F5DC8A);
+	filter: drop-shadow(0px 0px 2px rgb(245, 220, 138)) drop-shadow(0px 0px 6px rgba(245, 220, 138, 0.4)) drop-shadow(0px 0px 6px rgba(245, 220, 138, 0.2));
 	transition: .2s ease-in-out;
 }
 
 body {
-	background-color: #030303; 
+	background-color: #090909; 
 	color: #ffffff;
 }
 
 textarea {
 	width: 100%;
-	height: 40%;
-	background-color: #101010;
+	background-color: #090909;
 	color: #ffffff;
 	border-width: 0px;
 	border-radius: 12px;
 	resize: none;
 	font-size: 24px;
-	padding: 12px;
-	filter: drop-shadow(0 0 8px #F5DC8A);
-	box-shadow: inset 0px 0px 8px #F5DC8A;
+	padding: 15px;
 	text-align:center;
 	transition: .2s ease-in-out;
+	box-shadow: inset -2px -2px 4px #000000, inset -2px -2px 4px #000000, inset 3px 3px 3px rgb(245 220 138 / 10%), inset 1px 1px 2px rgb(245 220 138 / 60%)
 }
 
-textarea#traduzido {
-	border-width: 0px;
-	outline: 0px;
+textarea:focus { 
+	outline: none !important;
 }
 
-textarea#input:focus { 
-    outline: none !important;
- }
+#meio {
+	display: flex;
+	align-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 20px;
+	padding: 35px;
+	box-shadow: -4px -4px 5px #000000, 5px 5px 7px rgb(245 220 138 / 30%), 2px 2px 2px rgb(245 220 138 / 20%);
+	height: 70vh;
+	border-radius: 12px;
+}
 
 #cima {
 	margin: 35px;
 	text-align:center
 }
 
-#meio1, #meio2{
-	margin: 35px;
+#input, #traduzido{
+	height: 45%;
 }
 
 #meio1 {
-	margin-top: 0px;
+	display: inline-block;
+	width: 100%;
 }
 
 #meio2{
-	margin-bottom: 0px;
+	display: inline-block;
+	width: 100%;
 }
 
 #traduzido {
@@ -72,18 +79,18 @@ textarea#input:focus {
 	function traduzir() {
 		var texto = document.getElementById('input').value;
 		document.getElementById("traduzido").innerHTML = texto;
-		document.getElementById('titulo').style.filter = "drop-shadow(0 0 10px #FABD11) drop-shadow(0 0 5px #FABD11)";
-		document.getElementById('traduzido').style.filter = "drop-shadow(0 0 12px #FABD11)";
-		document.getElementById('input').style.filter = "drop-shadow(0 0 12px #FABD11)";
-		document.getElementById('traduzido').style.boxShadow = "inset 0px 0px 12px #FABD11";
-		document.getElementById('input').style.boxShadow = "inset 0px 0px 12px #FABD11";
+		document.getElementById('titulo').style.filter = "drop-shadow(0px 0px 2px rgb(250, 189, 17)) drop-shadow(0px 0px 6px rgba(250, 189, 17, 0.4)) drop-shadow(0px 0px 6px rgba(250, 189, 17, 0.2))";
+		var areadetextos = document.getElementsByTagName('textarea')
+		areadetextos[0].style.boxShadow = "inset -2px -2px 4px #000000, inset -2px -2px 4px #000000, inset 3px 3px 3px rgb(250 189 17 / 10%), inset 1px 1px 2px rgb(250 189 17 / 60%)";
+		areadetextos[1].style.boxShadow = "inset -2px -2px 4px #000000, inset -2px -2px 4px #000000, inset 3px 3px 3px rgb(250 189 17 / 10%), inset 1px 1px 2px rgb(250 189 17 / 60%)";
+		document.getElementById('meio').style.boxShadow = "-4px -4px 5px #000000, 5px 5px 7px rgb(250 189 17 / 30%), 2px 2px 2px rgb(250 189 17 / 20%)";
 	}
 	function sombrafraco() {
-		document.getElementById('titulo').style.filter = "drop-shadow(0 0 10px #F5DC8A) drop-shadow(0 0 5px #F5DC8A)";
-		document.getElementById('traduzido').style.filter = "drop-shadow(0 0 8px #F5DC8A)";
-		document.getElementById('input').style.filter = "drop-shadow(0 0 8px #F5DC8A)";
-		document.getElementById('traduzido').style.boxShadow = "inset 0px 0px 8px #F5DC8A";
-		document.getElementById('input').style.boxShadow = "inset 0px 0px 8px #F5DC8A";
+		document.getElementById('titulo').style.filter = "drop-shadow(0px 0px 2px rgb(245, 220, 138)) drop-shadow(0px 0px 6px rgba(245, 220, 138, 0.4)) drop-shadow(0px 0px 6px rgba(245, 220, 138, 0.2))";
+		var areadetextos = document.getElementsByTagName('textarea')
+		areadetextos[0].style.boxShadow = "inset -2px -2px 4px #000000, inset -2px -2px 4px #000000, inset 3px 3px 3px rgb(245 220 138 / 10%), inset 1px 1px 2px rgb(245 220 138 / 60%)";
+		areadetextos[1].style.boxShadow = "inset -2px -2px 4px #000000, inset -2px -2px 4px #000000, inset 3px 3px 3px rgb(245 220 138 / 10%), inset 1px 1px 2px rgb(245 220 138 / 60%)";
+		document.getElementById('meio').style.boxShadow = "-4px -4px 5px #000000, 5px 5px 7px rgb(245 220 138 / 30%), 2px 2px 2px rgb(245 220 138 / 20%)";
 	}
 </script>
 
@@ -92,12 +99,14 @@ textarea#input:focus {
 <div id="cima">
 	<h1 id="titulo">TRADUTOR DE SIGILOS DO CONHECIMENTO</h1>
 </div>
+<div id="meio">
 <div id="meio1">
 	<!--onfocus="sombraforte()"-->
 	<textarea id="input" onkeyup="traduzir()" onfocusout="sombrafraco()" placeholder="Seu texto aqui."></textarea>
 </div>
 <div id="meio2">
 	<textarea readonly id="traduzido" placeholder="Seu texto aqui."></textarea>
+</div>
 </div>
 </body>
 </html>
